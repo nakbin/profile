@@ -1,0 +1,48 @@
+- title: Education
+  type: time_table
+  contents:
+    - title: B.S. in Earth Science and Engineering
+      institution: UNIST, South Korea
+      year: 2009.03 – 2015.02
+    - title: Ph.D. in Environmental Science and Engineering
+      institution: UNIST, South Korea
+      year: 2015.03 – 2021.02
+      description: "Dissertation: Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction (Advisor: Prof. Myong-In Lee)"
+
+- title: Employments
+  type: time_table
+  contents:
+    - title: Postdoctoral Research Fellow
+      institution: George Mason University
+      year: 2023.06 – Present
+    - title: Postdoctoral Research Associate
+      institution: UNIST
+      year: 2021.03 – 2023.06
+
+- title: Research Experiences
+  type: time_table
+  contents:
+    - title: Visiting Scientist
+      institution: Met Office Hadley Centre, UK
+      year: 2023.01 – 2023.05
+    - title: Visiting Researcher
+      institution: NASA GSFC, Climate and Radiation Lab, USA
+      year: 2017.02
+    - title: Internship
+      institution: NASA GSFC, GMAO, USA
+      year: 2013.06 – 2013.08
+
+- title: Professional Services
+  type: list
+  contents:
+    - "Editor, Korean Atmospheric Scientists in America (KASA), 2024.10 – 2026.10"
+
+- title: Awards
+  type: list
+  contents:
+    - "Outstanding Poster Presentation Award, Korean Meteorological Society, 2019"
+
+- title: Patent
+  type: list
+  contents:
+    - "Medium-Range heatwave forecasting system and method. Domestic Patent Application, South Korea, 2019 (Myong-In Lee, Nakbin Choi, & Sunlae Tak)"
