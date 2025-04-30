@@ -37,7 +37,7 @@ author_profile: true
   {% assign total = site.publications | size %}          
   {% assign counter = total %}
   {% for post in site.publications reversed %}
-    <p>[{{ counter }}] {% include archive-single.html %}</p>
+    [{{ counter }}] {% include archive-single.html %}
     {% assign counter = counter | minus: 1 %}
   {% endfor %}
 {% endif %}
