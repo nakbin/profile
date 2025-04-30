@@ -41,8 +41,6 @@ UFS P8 also shows weak propagation of the Rossby wave from the tropical central 
 
 <img src="/images/Figure10.png" alt="Figure2" width="70%" />
 Figure 2. The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
-
-
 </p></p>
 
 
