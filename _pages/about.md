@@ -7,7 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-**Greetings!**
+**Nakbin Choi**
+Postdoctoral Research Fellow
+
+Department of Atmospheric, Oceanic, and Earth Sciences (AOES)
+
+George Mason University
+
+nchoi21@gmu.edu
+
 
 I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, and Earth Sciences (AOES) at George Mason University (GMU). My research focuses on subseasonal-to-seasonal (S2S) prediction using NOAA’s fully coupled global climate model, particularly the Unified Forecast System Version 8 (UFS P8).
 
