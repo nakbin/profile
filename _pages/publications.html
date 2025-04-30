@@ -15,8 +15,8 @@ author_profile: true
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% assign total = site.publications | size %}          {# ✅ 전체 게시물 수 계산 #}
-  {% assign counter = total %}                           {# ✅ 가장 큰 번호부터 시작 #}
+  {% assign total = site.publications | size %}         
+  {% assign counter = total %}                          
 
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -29,12 +29,12 @@ author_profile: true
         {% assign title_shown = true %}
       {% endunless %}
       
-      <p>[{{ counter }}] {% include archive-single.html %}</p>   {# ✅ 번호 출력 추가 #}
-      {% assign counter = counter | minus: 1 %}                  {# ✅ 번호 감소 #}
+      [{{ counter }}] {% include archive-single.html %}
+      {% assign counter = counter | minus: 1 %}                 
     {% endfor %}
   {% endfor %}
 {% else %}
-  {% assign total = site.publications | size %}          {# ✅ no-category fallback #}
+  {% assign total = site.publications | size %}          
   {% assign counter = total %}
   {% for post in site.publications reversed %}
     <p>[{{ counter }}] {% include archive-single.html %}</p>
