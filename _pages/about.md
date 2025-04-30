@@ -19,7 +19,9 @@ Diagnostic Climate Models
 UFS P8
 ------
 The UFS prototype 8 (UFS P8) is a fully coupled global model. The atmospheric component uses the Geophysical Fluid Dynamics Laboratory (GFDL) finite-volume cubedsphere dynamical core, which has c384 (;0.258) horizontal resolution and 127 vertical levels. The atmospheric physics package is the candidate for the Global Forecast System version 17 (GFSv17). The ocean model is GFDL Modular Ocean Model 6 (MOM6; Adcroft et al. 2019). The spatial resolution of MOM6 is a 0.258 tripolar grid with 75 hybrid vertical levels. The Los Alamos Sea Ice Model, version 6 (CICE6), WAVEWATCH III, and Goddard Chemistry Aerosol Radiation and Transport model (GOCART; Chin et al. 2000) are used for sea ice, waves, and aerosol components, respectively.
+
 The reforecasts of UFS P8 are initialized on the first and 15th of each month from April 2011 to March 2018. The atmospheric initial conditions come from the Global Ensemble Forecast System, version 12 (GEFSv12), analysis (Hamill et al. 2022) and the initial conditions of waves are forced by GEFS. The land is initialized by the Noah-MP land model with a combination of Global Soil Wetness Project and GDAS atmospheric forcing, while snow is initialized from Noah-MP with NASA-GLDAS forcing. The ocean and sea ice are initialized by the CPC-3DVAR ocean data assimilation product (Adcroft et al. 2019) and CPC Sea Ice Initialization System (CPC-CSIS; Stefanova et al. 2022), respectively. Each reforecast extends to 35 days. In UFS P8, there is only a deterministic run for each initialization.
+
 See More: https://vlab.noaa.gov/web/ufs-r2o/dataproducts
 
 Temperature Bias over CONUS
