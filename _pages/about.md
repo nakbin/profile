@@ -20,6 +20,7 @@ I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, a
 
 I obtained my Ph.D. in Atmospheric Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My Ph.D. thesis is “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction” under the advisement of Professor Myong-In Lee.
 
+Recent research interests are as follows:
 
 <h2>Diagnostic Climate Models</h2>
 
