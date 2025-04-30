@@ -28,14 +28,14 @@
 
 <h2 class="archive__item-title" itemprop="headline" style="margin: 0;">
   {% if post.link %}
-    <span style="font-size: 0.8em;">[{{ include.counter }}]</span>
+    <span style="font-size: 0.8em;">[{{ counter }}]</span>
     <a href="{{ post.link }}" style="font-size: 0.8em;">{{ title }}</a>
     <a href="{{ base_path }}{{ post.url }}" rel="permalink">
       <i class="fa fa-link" aria-hidden="true" title="permalink"></i>
       <span class="sr-only">Permalink</span>
     </a>
   {% else %}
-    <span style="font-size: 0.8em;">[{{ include.counter }}]</span>
+    <span style="font-size: 0.8em;">[{{ counter }}]</span>
     <a href="{{ base_path }}{{ post.url }}" style="font-size: 0.8em;" rel="permalink">{{ title }}</a>
   {% endif %}
 </h2>
