@@ -30,7 +30,7 @@
       {% if post.link %}
         [{{ counter }}] <a href="{{ post.link }}" style="font-size: 0.9em;">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        [{{ counter }}] <a href="{{ base_path }}{{ post.url }}" style="font-size: 0.9em;" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
     
