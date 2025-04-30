@@ -26,10 +26,10 @@ See More: https://vlab.noaa.gov/web/ufs-r2o/dataproducts
 
 Temperature Bias over CONUS
 ------
-![Figure1](/images/figure2.png)
 
-![Figure2](/images/Figure10.png)
-
+<img src="/images/figure2.png" alt="Figure1" width="50%" />
+<br />
+<img src="/images/Figure10.png" alt="Figure2" width="50%" />
 
 
 Coupled Data Assimilation
