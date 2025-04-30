@@ -29,9 +29,10 @@ Temperature Bias over CONUS
 
 The large-scale bias pattern in UFS P8 explains 31.6% of total bias variability and is strongly related to upper-level atmospheric circulation originating from the tropical central Pacific (Figure 1). 
 
-<img src="/images/figure2a.png" alt="Figure1" width="70%" />
-Figure 1. The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
-</p></p>
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+  <img src="/images/figure2a.png" alt="Figure 1" width="70%" /><br />
+  <strong>Figure 1.</strong> The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
+</p>
 
  
 The OLR bias over the tropical central Pacific generates a wave-like bias pattern in the upper atmosphere and affects the surface air temperature in the extratropics. 
