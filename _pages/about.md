@@ -30,8 +30,7 @@ Temperature Bias over CONUS
 The large-scale bias pattern in UFS P8 explains 31.6% of total bias variability and is strongly related to upper-level atmospheric circulation originating from the tropical central Pacific (Figure 1). 
 
 <img src="/images/figure2a.png" alt="Figure1" width="70%" />
-**Figure 1.** *The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)*
-<br/>
+**Figure 1.** The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
 </p>
 
 The OLR bias over the tropical central Pacific generates a wave-like bias pattern in the upper atmosphere and affects the surface air temperature in the extratropics. 
@@ -41,8 +40,7 @@ UFS P8 also shows weak propagation of the Rossby wave from the tropical central 
 
 
 <img src="/images/Figure10.png" alt="Figure2" width="70%" />
-**Figure 2.** *The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.*
-<br/>
+**Figure 2.** The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
 </p>
 
 The surface air temperature bias is strongly related to the upper-level Rossby wave from the tropics. 1) This Rossby wave appears as excited by the OLR bias in the central tropical Pacific. In addition, even if convection in the tropics is well represented, 2) the weak zonal wind at 500 hPa or upper-level atmosphere reduces eastward propagation of the Rossby wave, and 3) the strong vertical wind shear bias can suppress the amplitude of the Rossby wave (Figure 2).
