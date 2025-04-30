@@ -9,6 +9,6 @@
 
 main:
   - title: "CV"
-    url: /profile/cv/
+    url: /cv/
   - title: "Publications"
-    url: /profile/publications/
+    url: /publications/
