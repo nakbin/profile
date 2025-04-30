@@ -41,11 +41,10 @@ UFS P8 also shows weak propagation of the Rossby wave from the tropical central 
 
 <img src="/images/Figure10.png" alt="Figure2" width="70%" />
 Figure 2. The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
-<p style="font-family: 'Times New Roman', Times, serif;">
-  Figure 2. The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
-</p>
+
 
 </p></p>
+
 
 The surface air temperature bias is strongly related to the upper-level Rossby wave from the tropics. 1) This Rossby wave appears as excited by the OLR bias in the central tropical Pacific. In addition, even if convection in the tropics is well represented, 2) the weak zonal wind at 500 hPa or upper-level atmosphere reduces eastward propagation of the Rossby wave, and 3) the strong vertical wind shear bias can suppress the amplitude of the Rossby wave (Figure 2).
 
