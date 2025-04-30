@@ -28,11 +28,11 @@ Temperature Bias over CONUS
 ------
 
 <img src="/images/figure2a.png" alt="Figure1" width="70%" />
-<br />
 Figure 1. The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
-
+<br />
 
 <img src="/images/Figure10.png" alt="Figure2" width="70%" />
+Figure 2. The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
 
 
 Coupled Data Assimilation
