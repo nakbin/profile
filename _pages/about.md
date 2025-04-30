@@ -27,9 +27,12 @@ See More: https://vlab.noaa.gov/web/ufs-r2o/dataproducts
 Temperature Bias over CONUS
 ------
 
-<img src="/images/figure2a.png" alt="Figure1" width="50%" />
+<img src="/images/figure2a.png" alt="Figure1" width="70%" />
 <br />
-<img src="/images/Figure10.png" alt="Figure2" width="50%" />
+Figure 1. The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
+
+
+<img src="/images/Figure10.png" alt="Figure2" width="70%" />
 
 
 Coupled Data Assimilation
