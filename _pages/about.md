@@ -8,12 +8,10 @@ redirect_from:
 ---
 
 **Nakbin Choi**
+
 Postdoctoral Research Fellow
-
 Department of Atmospheric, Oceanic, and Earth Sciences (AOES)
-
 George Mason University
-
 nchoi21@gmu.edu
 
 
