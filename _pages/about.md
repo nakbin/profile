@@ -8,6 +8,8 @@ redirect_from:
 ---
 
 **Greetings!**
+
+
 I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, and Earth Sciences (AOES) at George Mason University (GMU). I earned my Ph.D. in Atmospheric Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My dissertation, titled “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction,” was supervised by Professor Myong-In Lee.
 
 A data-driven personal website
