@@ -27,7 +27,7 @@ See More: https://vlab.noaa.gov/web/ufs-r2o/dataproducts
 Temperature Bias over CONUS
 ------
 
-<img src="/images/figure2.png" alt="Figure1" width="50%" />
+<img src="/images/figure2a.png" alt="Figure1" width="50%" />
 <br />
 <img src="/images/Figure10.png" alt="Figure2" width="50%" />
 
