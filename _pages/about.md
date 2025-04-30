@@ -40,7 +40,7 @@ UFS P8 also shows weak propagation of the Rossby wave from the tropical central 
 
 
 <img src="/images/Figure10.png" alt="Figure2" width="70%" />
-Figure 2. The schematic diagram for three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
+Figure 2. The schematic diagram for the three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
 </p></p>
 
 
@@ -48,12 +48,16 @@ The surface air temperature bias is strongly related to the upper-level Rossby w
 
 Coupled Data Assimilation
 ======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+<img src="/images/Figure1.png" alt="Figure2" width="70%" />
+Figure 3. Schematic diagram of the CDA system. (1) Initialization and the free coupled model run from the coupled analysis to obtain the coupled background (“predictor” steps), (2) increment development (analysis to background) from atmospheric analysis every 6 h and (2) from ocean analysis every 24 h, (3) rewinding of the time step by 3 h, and (4) the coupled model run with IAU forcing terms (“corrector” steps) to produce the coupled analysis. Steps 1–4 outline the sequence of the WCDA process. (5) The GloSea5 ensemble forecasts from the coupled initialization can start at 0000, 0600, 1200, and 1800 UTC.
+
+<img src="/images/Figure9.png" alt="Figure2" width="70%" />
+Figure 4. (a) Correlation coefficient and (b) RMSE of the RMM index by forecasting time for UFcst (blue) and CFcst (red). Shading indicates the minimum–maximum range of bootstrapping with 10,000 random samplings.
+
+<img src="/images/daFigure10.png" alt="Figure2" width="70%" />
+Figure 5. Lag regression of averaged OLR (shading) and 850-hPa zonal wind (contours) from 10S to 10N onto the averaged OLR over the Indian Ocean (5S–5N, 65–75E) for (a) the GloSea5 coupled reanalysis, (c) UFcst, and (e) CFcst. Gray dashed lines indicate the forecast lead time at day 10 (horizontal) and the Maritime Continent centered at 1208E (vertical). Dotted areas indicate the 95% confidence level. (b),(d),(f) Differences (UFcst–CFcst, UFcst–GloSea5, and CFcst–GloSea5, respectively).
+
+
 
 Extreme Heat Events
 ======
