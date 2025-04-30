@@ -85,7 +85,3 @@ The main configuration file for the site is in the base directory in [_config.ym
 
 References
 ------
-For site 
-
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
