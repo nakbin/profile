@@ -24,8 +24,8 @@ author:
   # Biographic information
   avatar           : "profile.jpeg"
   name             : "Nakbin Choi"
-  pronouns         : "He/His"# example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  pronouns         : ""# example: "she/her"  
+  bio              : "Climate Dynamics & Modeling"
   location         : "Fairfax, VA, US"
   employer         : "George Mason University"
   uri              : # URL
