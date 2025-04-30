@@ -19,7 +19,7 @@ nchoi21@gmu.edu
 
 I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, and Earth Sciences (AOES) at George Mason University (GMU). My research focuses on subseasonal-to-seasonal (S2S) prediction using NOAA’s fully coupled global climate model, particularly the Unified Forecast System Version 8 (UFS P8).
 
-I obtained my Ph.D. in Atmosphere Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My Ph.D. thesis is “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction” under the advisory of Professor Myong-In Lee.
+I obtained my Ph.D. in Atmospheric Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My Ph.D. thesis is “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction” under the advisement of Professor Myong-In Lee.
 
 
 <h2>Diagnostic Climate Models</h2>
