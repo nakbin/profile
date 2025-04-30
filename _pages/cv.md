@@ -11,9 +11,11 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+- **Ph.D. in Environmental Science and Engineering**, UNIST, Korea (2015.03 – 2021.02)  
+  *Dissertation:* Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction  
+  *Advisor:* Prof. Myong-In Lee
+
+- **B.S. in Earth Science and Engineering**, UNIST, Korea (2009.03 – 2015.02)
 
 Work experience
 ======
