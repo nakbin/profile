@@ -17,23 +17,17 @@ Education
 
 - **B.S. in Earth Science and Engineering**, UNIST, Korea (2009.03 – 2015.02)
 
-Work experience
+Employments
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- **Postdoctoral Research Fellow**, George Mason University (2023.06 – Present)  
+- **Postdoctoral Research Associate**, UNIST (2021.03 – 2023.06)
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Research Experience
+======
+- **Visiting Scientist**, Met Office Hadley Centre, UK (2023.01 – 2023.05)  
+- **Visiting Researcher**, NASA GSFC, Climate and Radiation Lab, USA (2017.02)  
+- **Internship**, NASA GSFC, GMAO, USA (2013.06 – 2013.08)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
 * Skill 1
