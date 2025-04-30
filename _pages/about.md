@@ -48,10 +48,10 @@ The surface air temperature bias is strongly related to the upper-level Rossby w
 
 Coupled Data Assimilation
 ======
-<img src="/images/Figure1.png" alt="Figure2" width="70%" />
+<img src="/images/Figure1.png" alt="Figure2" width="90%" />
 Figure 3. Schematic diagram of the CDA system. (1) Initialization and the free coupled model run from the coupled analysis to obtain the coupled background (“predictor” steps), (2) increment development (analysis to background) from atmospheric analysis every 6 h and (2) from ocean analysis every 24 h, (3) rewinding of the time step by 3 h, and (4) the coupled model run with IAU forcing terms (“corrector” steps) to produce the coupled analysis. Steps 1–4 outline the sequence of the WCDA process. (5) The GloSea5 ensemble forecasts from the coupled initialization can start at 0000, 0600, 1200, and 1800 UTC.
 
-<img src="/images/Figure9.png" alt="Figure2" width="70%" />
+<img src="/images/Figure9.png" alt="Figure2" width="50%" />
 Figure 4. (a) Correlation coefficient and (b) RMSE of the RMM index by forecasting time for UFcst (blue) and CFcst (red). Shading indicates the minimum–maximum range of bootstrapping with 10,000 random samplings.
 
 <img src="/images/daFigure10.png" alt="Figure2" width="70%" />
