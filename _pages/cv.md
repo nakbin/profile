@@ -58,23 +58,11 @@ Publications (Selected)
    *Decadal changes in the leading patterns of sea level pressure in the Arctic and their impacts on the sea ice variability in boreal summer.*  
    *The Cryosphere*, 13, 3007–3021.  
    _First Author, IF = 4.9 (Q1)_
-   
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
+    
+Patent
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+- Medium-Range Heatwave Forecasting System and Method (Domestic, South Korea, 2019)
   
-Teaching
+Awards
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- Outstanding Poster Presentation Award, Korean Meteorological Society (2019)
