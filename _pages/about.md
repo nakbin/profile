@@ -14,18 +14,23 @@ I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, a
 I obtained my Ph.D. in Atmosphere Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My Ph.D. thesis is “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction” under the advisory of Professor Myong-In Lee.
 
 
-Diagnostic Climate Models
-======
-UFS P8
-------
-The UFS prototype 8 (UFS P8) is a fully coupled global model. The atmospheric component uses the Geophysical Fluid Dynamics Laboratory (GFDL) finite-volume cubedsphere dynamical core, which has c384 (;0.258) horizontal resolution and 127 vertical levels. The atmospheric physics package is the candidate for the Global Forecast System version 17 (GFSv17). The ocean model is GFDL Modular Ocean Model 6 (MOM6; Adcroft et al. 2019). The spatial resolution of MOM6 is a 0.258 tripolar grid with 75 hybrid vertical levels. The Los Alamos Sea Ice Model, version 6 (CICE6), WAVEWATCH III, and Goddard Chemistry Aerosol Radiation and Transport model (GOCART; Chin et al. 2000) are used for sea ice, waves, and aerosol components, respectively.
+<h2>Diagnostic Climate Models</h2>
 
-The reforecasts of UFS P8 are initialized on the first and 15th of each month from April 2011 to March 2018. The atmospheric initial conditions come from the Global Ensemble Forecast System, version 12 (GEFSv12), analysis (Hamill et al. 2022) and the initial conditions of waves are forced by GEFS. The land is initialized by the Noah-MP land model with a combination of Global Soil Wetness Project and GDAS atmospheric forcing, while snow is initialized from Noah-MP with NASA-GLDAS forcing. The ocean and sea ice are initialized by the CPC-3DVAR ocean data assimilation product (Adcroft et al. 2019) and CPC Sea Ice Initialization System (CPC-CSIS; Stefanova et al. 2022), respectively. Each reforecast extends to 35 days. In UFS P8, there is only a deterministic run for each initialization.
+<h3>UFS P8</h3>
 
-See More: https://vlab.noaa.gov/web/ufs-r2o/dataproducts
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+  The UFS prototype 8 (UFS P8) is a fully coupled global model. The atmospheric component uses the Geophysical Fluid Dynamics Laboratory (GFDL) finite-volume cubedsphere dynamical core, which has c384 (~0.25°) horizontal resolution and 127 vertical levels. The atmospheric physics package is the candidate for the Global Forecast System version 17 (GFSv17). The ocean model is GFDL Modular Ocean Model 6 (MOM6; Adcroft et al. 2019). The spatial resolution of MOM6 is a 0.25° tripolar grid with 75 hybrid vertical levels. The Los Alamos Sea Ice Model, version 6 (CICE6), WAVEWATCH III, and Goddard Chemistry Aerosol Radiation and Transport model (GOCART; Chin et al. 2000) are used for sea ice, waves, and aerosol components, respectively.
+</p>
 
-Temperature Bias over CONUS
-------
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+  The reforecasts of UFS P8 are initialized on the first and 15th of each month from April 2011 to March 2018. The atmospheric initial conditions come from the Global Ensemble Forecast System, version 12 (GEFSv12), analysis (Hamill et al. 2022) and the initial conditions of waves are forced by GEFS. The land is initialized by the Noah-MP land model with a combination of Global Soil Wetness Project and GDAS atmospheric forcing, while snow is initialized from Noah-MP with NASA-GLDAS forcing. The ocean and sea ice are initialized by the CPC-3DVAR ocean data assimilation product (Adcroft et al. 2019) and CPC Sea Ice Initialization System (CPC-CSIS; Stefanova et al. 2022), respectively. Each reforecast extends to 35 days. In UFS P8, there is only a deterministic run for each initialization.
+</p>
+
+<p style="font-family: 'Times New Roman', Times, serif;">
+  <strong>See More:</strong> <a href="https://vlab.noaa.gov/web/ufs-r2o/dataproducts" target="_blank">https://vlab.noaa.gov/web/ufs-r2o/dataproducts</a>
+</p>
+
+<h3>Temperature Bias over CONUS</h3>
 
 <p>The large-scale bias pattern in UFS P8 explains 31.6% of total bias variability and is strongly related to upper-level atmospheric circulation originating from the tropical central Pacific (Figure 1).</p>
 
