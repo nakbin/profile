@@ -8,3 +8,6 @@
    
 3) Publication 추가
  - _publications에 md 추가하기
+
+4) 왼쪽 패널 수정
+ - _config.yml
