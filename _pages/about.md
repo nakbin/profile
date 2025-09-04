@@ -9,10 +9,10 @@ redirect_from:
 
 <p>
   <strong>Nakbin Choi</strong><br />
-  Postdoctoral Research Fellow<br />
-  Department of Atmospheric, Oceanic, and Earth Sciences (AOES)<br />
-  George Mason University<br />
-  <a href="mailto:nchoi21@gmu.edu">nchoi21@gmu.edu</a>
+  Research Assistant Professor<br />
+  Department of Civil Urban Earth and Environmental Engineering<br />
+  Ulsan National Institute of Science and Technology<br />
+  <a href="mailto:nbchoi21@unist.ac.kr">nbchoi21@unist.ac.kr</a>
 </p>
 
 
