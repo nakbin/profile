@@ -19,7 +19,8 @@ Education
 
 Employments
 ======
-- **Postdoctoral Research Fellow**, George Mason University (2023.06 – Present)  
+- **Research A​ssistant Professor**, UNIST (2025.09 - Present)
+- **Postdoctoral Research Fellow**, George Mason University (2023.06 – 2025.09)  
 - **Postdoctoral Research Associate**, UNIST (2021.03 – 2023.06)
 
 Research Experience
