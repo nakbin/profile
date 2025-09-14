@@ -10,13 +10,13 @@ redirect_from:
 <p>
   <strong>Nakbin Choi</strong><br />
   Research Assistant Professor<br />
-  Department of Civil Urban Earth and Environmental Engineering<br />
+  Department of Civil, Urban, Earth, and Environmental Engineering<br />
   Ulsan National Institute of Science and Technology<br />
   <a href="mailto:nbchoi21@unist.ac.kr">nbchoi21@unist.ac.kr</a>
 </p>
 
 
-I am a postdoctoral research fellow in the Department of Atmospheric, Oceanic, and Earth Sciences (AOES) at George Mason University (GMU). My research focuses on subseasonal-to-seasonal (S2S) prediction using NOAA’s fully coupled global climate model, particularly the Unified Forecast System Version 8 (UFS P8).
+I am a Research Assistant Professor in the Department of Civil, Urban, Earth, and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST). My research focuses on subseasonal-to-seasonal (S2S) prediction and Coupled Data Assimilation. I'm involved in developing the Next-Generation Climate Model.
 
 I obtained my Ph.D. in Atmospheric Science from the Department of Urban and Environmental Engineering at Ulsan National Institute of Science and Technology (UNIST) in February 2021. My Ph.D. thesis is “Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction” under the advisement of Professor Myong-In Lee.
 
