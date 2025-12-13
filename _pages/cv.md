@@ -66,4 +66,5 @@ Patent
   
 Awards
 ======
+- Young Atmospheric Scientist Award, Korean Meteorological Society (2025)
 - Outstanding Poster Presentation Award, Korean Meteorological Society (2019)
