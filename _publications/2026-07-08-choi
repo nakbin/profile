@@ -1,0 +1,17 @@
+---
+title: "Potential sources of predictability for the surface air temperature over the CONUS during boreal winter"
+collection: publications
+category: manuscripts
+permalink: /publication/2026-04-29-choi
+excerpt: '**Nakbin Choi**, Cristiana Stan, Bora Lee, and Eunkyo Seo'
+date: 2026-05-05
+venue: 'Journal of Climate'
+paperurl: 'https://doi.org/10.1175/JCLI-D-25-0495.1'
+citation: 'Choi, N., Stan, C., Lee, B., & Seo, E. Potential sources of predictability for the surface air temperature over the CONUS during boreal winter. Journal of Climate, Accepted'
+---
+
+**Abstract**
+
+Subseasonal to seasonal (S2S) prediction skill of wintertime surface air temperature (SAT) over the contiguous United States (CONUS) remains limited by systematic model biases and incomplete understanding of sources of predictability. Using deterministic reforecasts from the NOAA Unified Forecast System prototype 8 (UFS P8) for December–March 2011–2018, we examine dominant spatial modes of SAT bias and their physical origins associated with Arctic variability, tropical forcing, and land–atmosphere interactions.
+Empirical orthogonal function analysis applied to UFS P8 identifies two leading modes of winter SAT bias. The first mode is linked to Arctic surface temperature variability over the East Siberian–Chukchi Sea, which exhibits rapidly decaying forecast skill beyond week 2. The second mode features a dipole pattern associated with an exaggerated upper-level circulation response and local surface processes. In boreal winter, UFS P8 exhibits an unrealistic upper-level circulation modulated by an erroneous, summer-like Rossby wave forced by tropical heating. In addition, it shows substantial deficiencies in land–atmosphere coupling over the eastern CONUS. Excessive downward longwave heating is the primary driver of surface warming in the region. Despite a wet soil moisture bias, increased soil moisture does not translate into enhanced latent heat flux, implying inefficient surface energy partitioning and reduced evaporative cooling that together amplify the warm bias.
+These combined deficiencies contribute to systematic warm biases in winter SAT over the eastern CONUS. They indicate that, at least in this model, surface warming is initiated by cloud-induced downward longwave radiation, but its magnitude and variability are modulated by land–atmosphere interactions via surface energy partitioning. Thus, these coupled processes represent an unexploited source of predictability for S2S forecasts. These findings reveal that gaps in understanding land surface processes during boreal winter pose a barrier to advancing extended-range forecast skill. 
