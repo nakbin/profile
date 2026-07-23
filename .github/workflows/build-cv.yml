@@ -9,7 +9,7 @@ on:
       - "_data/cv.yml"
       - "_publications/**"
       - "scripts/build_cv.py"
-      - "images/unist-logo.jpg"
+      - "images/unist-logo.png"
       - ".github/workflows/build-cv.yml"
   workflow_dispatch:
 
