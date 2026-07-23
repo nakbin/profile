@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[**CV (PDF)**]({{ site.baseurl }}/files/Nakbin_Choi_CV.pdf)
+
 Education
 ======
 - **Ph.D. in Environmental Science and Engineering**, UNIST, Korea (2015.03 – 2021.02)  
