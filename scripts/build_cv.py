@@ -8,7 +8,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
-
+from datetime import datetime
 
 # ==========================================================
 # Paths
@@ -16,7 +16,7 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parents[1]
 CV_DATA = ROOT / "_data" / "cv.yml"
 PUBLICATIONS_DIR = ROOT / "_publications"
-LOGO = ROOT / "images" / "unist-logo.jpg"
+LOGO = ROOT / "images" / "unist-logo.png"
 OUTPUT_DIR = ROOT / "files"
 OUTPUT_DOCX = OUTPUT_DIR / "Nakbin_Choi_CV.docx"
 
@@ -261,7 +261,13 @@ set_run(paragraph.add_run("CURRICULUM VITAE"), size=24, bold=True)
 paragraph = document.add_paragraph()
 paragraph.alignment = WD_ALIGN_PARAGRAPH.RIGHT
 paragraph.paragraph_format.space_after = Pt(2)
-set_run(paragraph.add_run("Updated automatically"), size=9.0, italic=True)
+cv_date = datetime.now().strftime("%B %Y")
+
+set_run(
+    paragraph.add_run(cv_date),
+    size=9.0,
+    bold=True,
+)
 add_bottom_border(paragraph, size=10)
 
 contact_table = document.add_table(rows=1, cols=2)
