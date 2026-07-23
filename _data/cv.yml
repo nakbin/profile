@@ -7,8 +7,10 @@
     - title: Ph.D. in Environmental Science and Engineering
       institution: UNIST, South Korea
       year: 2015.03 – 2021.02
-      description: "Dissertation: Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction (Advisor: Prof. Myong-In Lee)"
-
+      description: 
+       - "Dissertation: Development of a Coupled Data Assimilation System in the Fully Coupled Model and Its Implications for Seamless Prediction (Advisor: Prof. Myong-In Lee)"
+       - "Advisor: Prof. Myong-In Lee"
+       
 - title: Employments
   type: time_table
   contents:
@@ -40,6 +42,7 @@
 - title: Awards
   type: list
   contents:
+    - "Young Atmospheric Scientist Award, Korean Meteorological Society, 2025"
     - "Outstanding Poster Presentation Award, Korean Meteorological Society, 2019"
 
 - title: Patent
