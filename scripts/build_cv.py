@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CV_DATA = ROOT / "_data" / "cv.yml"
 PUBLICATIONS_DIR = ROOT / "_publications"
-LOGO = ROOT / "images" / "unist_logo.png"
+LOGO = ROOT / "images" / "unist-logo.png"
 
 OUTPUT_DIR = ROOT / "files"
 OUTPUT_DOCX = OUTPUT_DIR / "Nakbin_Choi_CV.docx"
