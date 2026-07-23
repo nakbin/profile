@@ -1,0 +1,62 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "_data/cv.yml"
+      - "_publications/**"
+      - "scripts/build_cv.py"
+      - "images/unist-logo.jpg"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python packages
+        run: pip install python-docx PyYAML
+
+      - name: Install LibreOffice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice
+
+      - name: Build DOCX
+        run: python scripts/build_cv.py
+
+      - name: Convert DOCX to PDF
+        run: |
+          libreoffice \
+            --headless \
+            --convert-to pdf \
+            --outdir files \
+            files/Nakbin_Choi_CV.docx
+
+      - name: Commit generated CV files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files/Nakbin_Choi_CV.docx files/Nakbin_Choi_CV.pdf
+
+          if git diff --cached --quiet; then
+            echo "No CV changes to commit."
+          else
+            git commit -m "Update generated CV"
+            git push
+          fi
