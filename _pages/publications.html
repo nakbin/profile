@@ -15,32 +15,37 @@ author_profile: true
 
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
-  {% assign total = site.publications | size %}   
-  {% assign counter = total %}                    
+  {% assign total = site.publications | size %}
+  {% assign in_review_posts = site.publications | where: "category", "in_review" %}
+  {% assign in_review_total = in_review_posts | size %}
+  {% assign counter = total | minus: in_review_total %}
 
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
+
       {% unless title_shown %}
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
+
       {% include archive-single.html %}
-      {% assign counter = counter | minus: 1 %}
+
+      {% unless post.category == "in_review" %}
+        {% assign counter = counter | minus: 1 %}
+      {% endunless %}
     {% endfor %}
   {% endfor %}
+
 {% else %}
   {% assign total = site.publications | size %}
-  {% assign in_review_posts = site.publications | where: "category", "in_review" %}
-  {% assign in_review_total = in_review_posts | size %}
-  {% assign counter = total | minus: in_review_total %}
+  {% assign counter = total %}
+
   {% for post in site.publications reversed %}
     <p>[{{ counter }}] {% include archive-single.html %}</p>
-    {% unless post.category == "in_review" %}
-      {% assign counter = counter | minus: 1 %}
-    {% endunless %}  
+    {% assign counter = counter | minus: 1 %}
   {% endfor %}
 {% endif %}
