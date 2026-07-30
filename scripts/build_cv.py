@@ -805,6 +805,94 @@ def read_markdown_list(lines):
     return entries
 
 
+def read_research_interests(lines):
+
+    interests = []
+    current_interest = None
+
+    for raw_line in lines:
+
+        line = raw_line.strip()
+
+        if not line:
+            continue
+
+        numbered_heading = re.match(
+            r"^\*\*\s*\d+[\.\)]\s*(.+?)\s*\*\*(.*)$",
+            line,
+        )
+
+        if numbered_heading is not None:
+
+            current_interest = {
+                "title": clean_markdown(
+                    numbered_heading.group(1)
+                ),
+                "topics": [],
+            }
+
+            interests.append(
+                current_interest
+            )
+
+            remainder = clean_markdown(
+                numbered_heading.group(2)
+            ).lstrip(":").strip()
+
+            if remainder:
+
+                current_interest["topics"].append(
+                    remainder
+                )
+
+            continue
+
+        bullet = re.match(
+            r"^(\s*)[-+*]\s+(.*)$",
+            raw_line,
+        )
+
+        if bullet is not None:
+
+            bullet_text = bullet.group(2).strip()
+
+            bold_heading = re.match(
+                r"^\*\*(.+?)\*\*\s*$",
+                bullet_text,
+            )
+
+            if bold_heading is not None:
+
+                current_interest = {
+                    "title": clean_markdown(
+                        bold_heading.group(1)
+                    ),
+                    "topics": [],
+                }
+
+                interests.append(
+                    current_interest
+                )
+
+            elif current_interest is not None:
+
+                current_interest["topics"].append(
+                    clean_markdown(
+                        bullet_text
+                    )
+                )
+
+            continue
+
+        if current_interest is not None:
+
+            current_interest["topics"].append(
+                clean_markdown(line)
+            )
+
+    return interests
+
+
 def read_cv_page(path):
 
     text = path.read_text(
@@ -860,6 +948,7 @@ def read_cv_page(path):
     for raw_section in raw_sections:
 
         title = raw_section["title"]
+
         entries = read_markdown_list(
             raw_section["lines"]
         )
@@ -880,41 +969,9 @@ def read_cv_page(path):
 
         if title.lower() == "research interests":
 
-            interests = []
-
-            for entry in entries:
-
-                match = re.match(
-                    r"^\*\*(.+?)\*\*(.*)$",
-                    entry["text"],
-                )
-
-                if match is not None:
-
-                    interest_title = (
-                        match.group(1)
-                    )
-
-                else:
-
-                    interest_title = (
-                        entry["text"]
-                    )
-
-                interests.append(
-                    {
-                        "title": clean_markdown(
-                            interest_title
-                        ),
-                        "topics": [
-                            clean_markdown(topic)
-                            for topic in (
-                                entry["children"]
-                                + entry["continuation"]
-                            )
-                        ],
-                    }
-                )
+            interests = read_research_interests(
+                raw_section["lines"]
+            )
 
             cv_sections.append(
                 {
@@ -954,6 +1011,7 @@ def read_cv_page(path):
                 )
 
                 remainder = match.group(2).strip()
+
                 date_match = re.search(
                     r"\s*\(([^()]*)\)\s*$",
                     remainder,
