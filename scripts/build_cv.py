@@ -628,6 +628,20 @@ def add_publication(
         )
 
 
+def add_publication_separator(document):
+
+    paragraph = document.add_paragraph()
+
+    paragraph.paragraph_format.space_before = Pt(2)
+    paragraph.paragraph_format.space_after = Pt(8)
+    paragraph.paragraph_format.keep_with_next = True
+
+    add_bottom_border(
+        paragraph,
+        size=6,
+    )
+
+
 # ==========================================================
 # Read CV data
 # ==========================================================
@@ -643,12 +657,26 @@ with CV_DATA.open(
 
 
 publications = []
+in_review_publications = []
 
 for path in PUBLICATIONS_DIR.glob(
     "*.md"
 ):
 
     metadata = read_frontmatter(path)
+
+    category = str(
+        metadata.get(
+            "category",
+            "",
+        )
+    ).strip()
+
+    if category not in {
+        "manuscripts",
+        "in_review",
+    }:
+        continue
 
     citation = str(
         metadata.get(
@@ -663,20 +691,35 @@ for path in PUBLICATIONS_DIR.glob(
     if not citation.endswith("."):
         citation += "."
 
-    publications.append(
-        {
-            "date": str(
-                metadata.get(
-                    "date",
-                    "",
-                )
-            ),
-            "citation": citation,
-        }
-    )
+    publication = {
+        "date": str(
+            metadata.get(
+                "date",
+                "",
+            )
+        ),
+        "citation": citation,
+    }
+
+    if category == "manuscripts":
+
+        publications.append(
+            publication
+        )
+
+    else:
+
+        in_review_publications.append(
+            publication
+        )
 
 
 publications.sort(
+    key=lambda item: item["date"],
+    reverse=True,
+)
+
+in_review_publications.sort(
     key=lambda item: item["date"],
     reverse=True,
 )
@@ -1056,13 +1099,14 @@ for cv_section in cv_sections:
 # ==========================================================
 # Publications
 # ==========================================================
-if publications:
+if publications or in_review_publications:
 
     add_section_heading(
         document,
         "Publications",
     )
 
+    # Published manuscripts
     publication_count = len(
         publications
     )
@@ -1074,6 +1118,28 @@ if publications:
         add_publication(
             document,
             publication_count - index,
+            publication["citation"],
+        )
+
+    # Separator between published and in-review papers
+    if publications and in_review_publications:
+
+        add_publication_separator(
+            document,
+        )
+
+    # In-review manuscripts with independent numbering
+    in_review_count = len(
+        in_review_publications
+    )
+
+    for index, publication in enumerate(
+        in_review_publications
+    ):
+
+        add_publication(
+            document,
+            in_review_count - index,
             publication["citation"],
         )
 
