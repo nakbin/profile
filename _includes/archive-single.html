@@ -48,10 +48,10 @@
       {% if post.link %}
 
         {% unless post.category == "in_review" %}
-          <span style="font-size: 0.8em;">[{{ counter }}]</span>
+          <span style="font-size: 0.9em;">[{{ counter }}]</span>
         {% endunless %}
 
-        <a href="{{ post.link }}" style="font-size: 0.8em;">
+        <a href="{{ post.link }}" style="font-size: 0.9em;">
           {{ title }}
         </a>
 
@@ -67,12 +67,12 @@
       {% else %}
 
         {% unless post.category == "in_review" %}
-          <span style="font-size: 0.8em;">[{{ counter }}]</span>
+          <span style="font-size: 0.9em;">[{{ counter }}]</span>
         {% endunless %}
 
         <a
           href="{{ base_path }}{{ post.url }}"
-          style="font-size: 0.8em;"
+          style="font-size: 0.9em;"
           rel="permalink"
         >
           {{ title }}
@@ -154,12 +154,12 @@
           <p
             style="
               margin: 0;
-              font-size: 0.85em;
+              font-size: 0.9em;
               line-height: 1.45;
               color: #666;
             "
           >
-            <strong>Recommended citation:</strong>
+            citation:
             {{ post.citation }}
           </p>
         {% endif %}
