@@ -20,7 +20,7 @@ from docx.shared import Inches, Pt, RGBColor
 # ==========================================================
 ROOT = Path(__file__).resolve().parents[1]
 
-CV_DATA = ROOT / "_data" / "cv.yml"
+CV_PAGE = ROOT / "_pages" / "cv.md"
 PUBLICATIONS_DIR = ROOT / "_publications"
 LOGO = ROOT / "images" / "unist-logo.png"
 
@@ -55,62 +55,6 @@ PHONE = (
     "(Korea) 010-4946-6138  |  "
     "(US) +1 (703) 843-4060"
 )
-
-RESEARCH_INTERESTS = [
-    {
-        "title": (
-            "Subseasonal-to-Seasonal Prediction "
-            "and Predictability"
-        ),
-        "topics": [
-            (
-                "Predictability, forecast skill, "
-                "and systematic biases in coupled "
-                "prediction systems"
-            ),
-            (
-                "Evaluation and improvement of "
-                "predictions across weather-to-climate "
-                "timescales"
-            ),
-        ],
-    },
-    {
-        "title": (
-            "Climate Dynamics, Teleconnections, "
-            "and Extremes"
-        ),
-        "topics": [
-            (
-                "Tropical climate variability and "
-                "tropical–extratropical interactions"
-            ),
-            (
-                "Large-scale atmospheric circulation, "
-                "teleconnection processes, and climate "
-                "extremes"
-            ),
-        ],
-    },
-    {
-        "title": (
-            "Coupled Earth System Processes "
-            "and Data Assimilation"
-        ),
-        "topics": [
-            (
-                "Atmosphere–ocean and land–atmosphere "
-                "interactions"
-            ),
-            (
-                "Coupled data assimilation and "
-                "initialization of Earth system "
-                "prediction models"
-            ),
-        ],
-    },
-]
-
 
 OUTPUT_DIR.mkdir(
     parents=True,
@@ -766,17 +710,336 @@ def add_publication_separator(document):
 
 
 # ==========================================================
-# Read CV data
+# CV page data
 # ==========================================================
-with CV_DATA.open(
-    "r",
-    encoding="utf-8",
-) as file:
+def clean_markdown(text):
 
-    cv_sections = (
-        yaml.safe_load(file)
-        or []
+    cleaned = str(text).strip()
+
+    cleaned = cleaned.replace(
+        "\u200b",
+        "",
     )
+
+    cleaned = re.sub(
+        r"\[([^\]]+)\]\([^)]+\)",
+        r"\1",
+        cleaned,
+    )
+
+    cleaned = re.sub(
+        r"(\*\*|__)(.+?)\1",
+        r"\2",
+        cleaned,
+    )
+
+    cleaned = re.sub(
+        r"(?<!\*)\*([^*]+)\*(?!\*)",
+        r"\1",
+        cleaned,
+    )
+
+    cleaned = re.sub(
+        r"(?<!_)_([^_]+)_(?!_)",
+        r"\1",
+        cleaned,
+    )
+
+    cleaned = cleaned.replace(
+        "`",
+        "",
+    )
+
+    return cleaned.strip()
+
+
+def read_markdown_list(lines):
+
+    entries = []
+    current_entry = None
+
+    for raw_line in lines:
+
+        if not raw_line.strip():
+            continue
+
+        match = re.match(
+            r"^(\s*)(?:[-+*]|\d+\.)\s+(.*)$",
+            raw_line,
+        )
+
+        if match is not None:
+
+            indent = len(
+                match.group(1).expandtabs(4)
+            )
+
+            text = match.group(2).strip()
+
+            if indent == 0:
+
+                current_entry = {
+                    "text": text,
+                    "children": [],
+                    "continuation": [],
+                }
+
+                entries.append(
+                    current_entry
+                )
+
+            elif current_entry is not None:
+
+                current_entry["children"].append(
+                    text
+                )
+
+            continue
+
+        if current_entry is not None:
+
+            current_entry["continuation"].append(
+                raw_line.strip()
+            )
+
+    return entries
+
+
+def read_cv_page(path):
+
+    text = path.read_text(
+        encoding="utf-8"
+    )
+
+    text = re.sub(
+        r"^---\s*\n.*?\n---\s*\n",
+        "",
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+
+    lines = text.splitlines()
+    raw_sections = []
+
+    index = 0
+
+    while index < len(lines):
+
+        if (
+            index + 1 < len(lines)
+            and lines[index].strip()
+            and re.fullmatch(
+                r"=+",
+                lines[index + 1].strip(),
+            )
+        ):
+
+            raw_sections.append(
+                {
+                    "title": clean_markdown(
+                        lines[index]
+                    ),
+                    "lines": [],
+                }
+            )
+
+            index += 2
+            continue
+
+        if raw_sections:
+
+            raw_sections[-1]["lines"].append(
+                lines[index]
+            )
+
+        index += 1
+
+    cv_sections = []
+
+    for raw_section in raw_sections:
+
+        title = raw_section["title"]
+        entries = read_markdown_list(
+            raw_section["lines"]
+        )
+
+        if title.lower().startswith(
+            "publications"
+        ):
+
+            cv_sections.append(
+                {
+                    "title": "Publications",
+                    "type": "publications",
+                    "contents": [],
+                }
+            )
+
+            continue
+
+        if title.lower() == "research interests":
+
+            interests = []
+
+            for entry in entries:
+
+                match = re.match(
+                    r"^\*\*(.+?)\*\*(.*)$",
+                    entry["text"],
+                )
+
+                if match is not None:
+
+                    interest_title = (
+                        match.group(1)
+                    )
+
+                else:
+
+                    interest_title = (
+                        entry["text"]
+                    )
+
+                interests.append(
+                    {
+                        "title": clean_markdown(
+                            interest_title
+                        ),
+                        "topics": [
+                            clean_markdown(topic)
+                            for topic in (
+                                entry["children"]
+                                + entry["continuation"]
+                            )
+                        ],
+                    }
+                )
+
+            cv_sections.append(
+                {
+                    "title": title,
+                    "type": "research_interests",
+                    "contents": interests,
+                }
+            )
+
+            continue
+
+        is_timeline = (
+            bool(entries)
+            and all(
+                re.match(
+                    r"^\*\*.+?\*\*",
+                    entry["text"],
+                )
+                is not None
+                for entry in entries
+            )
+        )
+
+        if is_timeline:
+
+            contents = []
+
+            for entry in entries:
+
+                match = re.match(
+                    r"^\*\*(.+?)\*\*(.*)$",
+                    entry["text"],
+                )
+
+                item_title = clean_markdown(
+                    match.group(1)
+                )
+
+                remainder = match.group(2).strip()
+                date_match = re.search(
+                    r"\s*\(([^()]*)\)\s*$",
+                    remainder,
+                )
+
+                if date_match is not None:
+
+                    year = clean_markdown(
+                        date_match.group(1)
+                    )
+
+                    institution = (
+                        remainder[
+                            :date_match.start()
+                        ]
+                    )
+
+                else:
+
+                    year = ""
+                    institution = remainder
+
+                institution = clean_markdown(
+                    institution.lstrip(
+                        ", "
+                    )
+                )
+
+                description = [
+                    clean_markdown(line)
+                    for line in (
+                        entry["continuation"]
+                        + entry["children"]
+                    )
+                ]
+
+                contents.append(
+                    {
+                        "title": item_title,
+                        "institution": institution,
+                        "year": year,
+                        "description": description,
+                    }
+                )
+
+            cv_sections.append(
+                {
+                    "title": title,
+                    "type": "time_table",
+                    "contents": contents,
+                }
+            )
+
+        else:
+
+            contents = []
+
+            for entry in entries:
+
+                item_lines = [
+                    entry["text"],
+                    *entry["continuation"],
+                    *entry["children"],
+                ]
+
+                contents.append(
+                    " ".join(
+                        clean_markdown(line)
+                        for line in item_lines
+                    )
+                )
+
+            cv_sections.append(
+                {
+                    "title": title,
+                    "type": "list",
+                    "contents": contents,
+                }
+            )
+
+    return cv_sections
+
+
+cv_sections = read_cv_page(
+    CV_PAGE
+)
 
 
 publications = []
@@ -1168,16 +1431,7 @@ logo_paragraph.add_run().add_picture(
 
 
 # ==========================================================
-# Research interests
-# ==========================================================
-add_research_interests(
-    document,
-    RESEARCH_INTERESTS,
-)
-
-
-# ==========================================================
-# CV sections from _data/cv.yml
+# CV sections from _pages/cv.md
 # ==========================================================
 for cv_section in cv_sections:
 
@@ -1204,6 +1458,67 @@ for cv_section in cv_sections:
     )
 
     if not title or not contents:
+
+        if section_type != "publications":
+            continue
+
+    if section_type == "research_interests":
+
+        add_research_interests(
+            document,
+            contents,
+        )
+
+        continue
+
+    if section_type == "publications":
+
+        if publications or in_review_publications:
+
+            document.add_page_break()
+
+            add_section_heading(
+                document,
+                "Publications",
+            )
+
+            publication_count = len(
+                publications
+            )
+
+            for index, publication in enumerate(
+                publications
+            ):
+
+                add_publication(
+                    document,
+                    publication_count - index,
+                    publication["citation"],
+                )
+
+            if (
+                publications
+                and in_review_publications
+            ):
+
+                add_publication_separator(
+                    document,
+                )
+
+            in_review_count = len(
+                in_review_publications
+            )
+
+            for index, publication in enumerate(
+                in_review_publications
+            ):
+
+                add_publication(
+                    document,
+                    in_review_count - index,
+                    publication["citation"],
+                )
+
         continue
 
     add_section_heading(
@@ -1226,51 +1541,6 @@ for cv_section in cv_sections:
                 document,
                 str(item),
             )
-
-
-# ==========================================================
-# Publications
-# ==========================================================
-if publications or in_review_publications:
-
-    add_section_heading(
-        document,
-        "Publications",
-    )
-
-    publication_count = len(
-        publications
-    )
-
-    for index, publication in enumerate(
-        publications
-    ):
-
-        add_publication(
-            document,
-            publication_count - index,
-            publication["citation"],
-        )
-
-    if publications and in_review_publications:
-
-        add_publication_separator(
-            document,
-        )
-
-    in_review_count = len(
-        in_review_publications
-    )
-
-    for index, publication in enumerate(
-        in_review_publications
-    ):
-
-        add_publication(
-            document,
-            in_review_count - index,
-            publication["citation"],
-        )
 
 
 # ==========================================================
