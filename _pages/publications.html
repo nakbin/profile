@@ -34,9 +34,13 @@ author_profile: true
   {% endfor %}
 {% else %}
   {% assign total = site.publications | size %}
-  {% assign counter = total %}
+  {% assign in_review_posts = site.publications | where: "category", "in_review" %}
+  {% assign in_review_total = in_review_posts | size %}
+  {% assign counter = total | minus: in_review_total %}
   {% for post in site.publications reversed %}
     <p>[{{ counter }}] {% include archive-single.html %}</p>
-    {% assign counter = counter | minus: 1 %}
+    {% unless post.category == "in_review" %}
+      {% assign counter = counter | minus: 1 %}
+    {% endunless %}  
   {% endfor %}
 {% endif %}
