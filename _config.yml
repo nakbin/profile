@@ -85,6 +85,8 @@ publication_category:
     title: 'Conference Papers'
   reports:
     title: 'Reports'
+  in_review:
+    title: 'In Review'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
