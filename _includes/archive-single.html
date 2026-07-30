@@ -48,7 +48,7 @@
       {% if post.link %}
 
         {% unless post.category == "in_review" %}
-          <span style="font-size: 0.9em;">[{{ counter }}]</span>
+          <span style="font-size: 0.75em; font-weight: normal;">[{{ counter }}]</span>
         {% endunless %}
 
         <a href="{{ post.link }}" style="font-size: 0.85em;">
@@ -67,7 +67,7 @@
       {% else %}
 
         {% unless post.category == "in_review" %}
-          <span style="font-size: 0.9em;">[{{ counter }}]</span>
+          <span style="font-size: 0.75em; font-weight: normal;">[{{ counter }}]</span>
         {% endunless %}
 
         <a
