@@ -1,0 +1,15 @@
+---
+title: "Incremental Contribution of Soil Moisture Data Assimilation to Sub-seasonal Prediction of the 2022 Central Eastern China Heatwave"
+collection: publications
+category: in_review
+permalink: /publication/2026-07-29-tak
+excerpt: "Sunlae Tak, Eunkyo Seo, Myong-In Lee and **Nakbin Choi**"
+date: 2026-07-29
+venue: 'Weather and Climate Extremes'
+paperurl: 'https://doi.org/'
+citation: ", 2026."
+---
+
+**Abstract**
+
+This study investigates the impact of refined land initial conditions on the predictability of the unprecedented 2022 compound heatwave–drought event over Central Eastern China. The intensification and persistence of such compound extremes are increasingly governed by land–atmosphere (L–A) interactions, making accurate land initialization essential for improving their prediction skill. To evaluate this impact, we conduct forecast experiments with the GloSea6 coupled model using three soil moisture (SM) initialization strategies, based on climatological SM (Clim), an offline LSM simulation (noDA), and multi-sensor data assimilation (DA). Refining the land initialization substantially enhances the predictive fidelity of both the spatial distribution and the intensity of the heatwave. Specifically, it improves the spatial correlation of maximum-temperature forecasts from 0.26 to 0.80 during the peak heatwave period (3–24 August) and increases the fraction of attributable risk (FAR) for the extreme event by 58% in noDA and 68% in DA relative to Clim. This enhancement arises from a better representation of the soil moisture–temperature feedback, whereby the refined initial conditions enable the model to simulate the water-limited regime more realistically. Process-based metrics further confirm that the simulation of L–A coupling regimes improves substantially with refined initialization, indicating that appropriate soil moisture states are essential for the model to partition net radiation into sensible rather than latent heat flux. As compound heatwave–drought extremes grow more frequent and severe under continued warming, these findings establish refined land initialization as a key lever for extending the lead time and reliability of their sub-seasonal prediction.
