@@ -56,6 +56,61 @@ PHONE = (
     "(US) +1 (703) 843-4060"
 )
 
+RESEARCH_INTERESTS = [
+    {
+        "title": (
+            "Subseasonal-to-Seasonal Prediction "
+            "and Predictability"
+        ),
+        "topics": [
+            (
+                "Predictability, forecast skill, "
+                "and systematic biases in coupled "
+                "prediction systems"
+            ),
+            (
+                "Evaluation and improvement of "
+                "predictions across weather-to-climate "
+                "timescales"
+            ),
+        ],
+    },
+    {
+        "title": (
+            "Climate Dynamics, Teleconnections, "
+            "and Extremes"
+        ),
+        "topics": [
+            (
+                "Tropical climate variability and "
+                "tropical–extratropical interactions"
+            ),
+            (
+                "Large-scale atmospheric circulation, "
+                "teleconnection processes, and climate "
+                "extremes"
+            ),
+        ],
+    },
+    {
+        "title": (
+            "Coupled Earth System Processes "
+            "and Data Assimilation"
+        ),
+        "topics": [
+            (
+                "Atmosphere–ocean and land–atmosphere "
+                "interactions"
+            ),
+            (
+                "Coupled data assimilation and "
+                "initialization of Earth system "
+                "prediction models"
+            ),
+        ],
+    },
+]
+
 
 OUTPUT_DIR.mkdir(
     parents=True,
@@ -312,6 +367,74 @@ def add_bullet(
         ),
         size=9.6,
     )
+
+
+def add_research_interests(
+    document,
+    interests,
+):
+
+    add_section_heading(
+        document,
+        "Research Interests",
+    )
+
+    for number, interest in enumerate(
+        interests,
+        start=1,
+    ):
+
+        paragraph = document.add_paragraph()
+
+        paragraph.paragraph_format.left_indent = (
+            Inches(0.25)
+        )
+
+        paragraph.paragraph_format.first_line_indent = (
+            Inches(-0.25)
+        )
+
+        paragraph.paragraph_format.space_before = Pt(0)
+        paragraph.paragraph_format.space_after = Pt(3)
+        paragraph.paragraph_format.keep_with_next = True
+
+        set_run(
+            paragraph.add_run(
+                f"{number}. "
+            ),
+            size=9.6,
+        )
+
+        set_run(
+            paragraph.add_run(
+                interest["title"]
+            ),
+            size=9.6,
+            bold=True,
+        )
+
+        for topic in interest["topics"]:
+
+            paragraph = document.add_paragraph()
+
+            paragraph.paragraph_format.left_indent = (
+                Inches(0.53)
+            )
+
+            paragraph.paragraph_format.first_line_indent = (
+                Inches(-0.16)
+            )
+
+            paragraph.paragraph_format.space_before = Pt(0)
+            paragraph.paragraph_format.space_after = Pt(3)
+            paragraph.paragraph_format.keep_together = True
+
+            set_run(
+                paragraph.add_run(
+                    "•  " + topic
+                ),
+                size=9.3,
+            )
 
 
 # ==========================================================
@@ -1045,6 +1168,15 @@ logo_paragraph.add_run().add_picture(
 
 
 # ==========================================================
+# Research interests
+# ==========================================================
+add_research_interests(
+    document,
+    RESEARCH_INTERESTS,
+)
+
+
+# ==========================================================
 # CV sections from _data/cv.yml
 # ==========================================================
 for cv_section in cv_sections:
@@ -1106,7 +1238,6 @@ if publications or in_review_publications:
         "Publications",
     )
 
-    # Published manuscripts
     publication_count = len(
         publications
     )
@@ -1121,14 +1252,12 @@ if publications or in_review_publications:
             publication["citation"],
         )
 
-    # Separator between published and in-review papers
     if publications and in_review_publications:
 
         add_publication_separator(
             document,
         )
 
-    # In-review manuscripts with independent numbering
     in_review_count = len(
         in_review_publications
     )
