@@ -11,6 +11,21 @@ redirect_from:
 
 [**CV (PDF)**]({{ site.baseurl }}/files/Nakbin_Choi_CV.pdf)
 
+
+Research Interests
+======
+**1) Subseasonal-to-Seasonal Prediction and Predictability**
+  - Predictability, forecast skill, and systematic biases in coupled prediction systems
+  - Evaluation and improvement of predictions across weather-to-climate timescales
+
+**2) Climate Dynamics, Teleconnections, and Extremes**
+  - Tropical climate variability and tropical–extratropical interactions
+  - Large-scale atmospheric circulation, teleconnection processes, and climate extremes
+
+**3) Coupled Earth System Processes and Data Assimilation**
+  - Atmosphere–ocean and land–atmosphere interactions
+  - Coupled data assimilation and initialization of Earth system prediction models
+
 Education
 ======
 - **Ph.D. in Environmental Science and Engineering**, UNIST, Korea (2015.03 – 2021.02)  
