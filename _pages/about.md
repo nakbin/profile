@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "Nakbin Choi"
+seo_title: "Nakbin Choi | Climate Scientist at UNIST"
+description: "Nakbin Choi is a climate scientist and Research Assistant Professor at Ulsan National Institute of Science and Technology (UNIST), specializing in climate dynamics, subseasonal-to-seasonal prediction, and coupled data assimilation."
 author_profile: true
 redirect_from: 
   - /about/
