@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome"
+title: "Nakbin Choi"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,8 +8,7 @@ redirect_from:
 ---
 
 <p>
-  <strong>Nakbin Choi</strong><br />
-  Research Assistant Professor<br />
+  <strong>Research Assistant Professor</strong><br />
   Department of Civil, Urban, Earth, and Environmental Engineering<br />
   Ulsan National Institute of Science and Technology<br />
   <a href="mailto:nbchoi21@unist.ac.kr">nbchoi21@unist.ac.kr</a>
