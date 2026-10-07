@@ -23,10 +23,12 @@ I obtained my Ph.D. in Atmospheric Science from the Department of Urban and Envi
 
 Recent research interests are as follows:
 
-Atmospheric controls on ITCZ biases
+<h2>Diagnostic Climate Models</h2>
+<h3>Atmospheric controls on ITCZ biases</h3>
+
 We investigate why climate models misrepresent the north–south distribution of tropical rainfall. Across models, ITCZ asymmetry is more strongly associated with the vertical structure of atmospheric moisture and virtual temperature than with sea surface temperature alone. Single-column experiments show that moisture-profile changes produce consistent responses in both convective and large-scale precipitation, whereas SST perturbations primarily affect convective precipitation. These results highlight the importance of atmospheric thermodynamic structure, alongside SST, in understanding and reducing ITCZ biases.
 ![Precipitation responses]({{ "/images/itcz_fig4.png" | relative_url }})
-Precipitation responses to SST and moisture-profile perturbations in single-column simulations. Panels show changes in total, convective, and large-scale precipitation relative to the control. Source: Choi, Quan, and Stan (2026), Fig. 4.
+Precipitation responses to SST and moisture-profile perturbations in single-column simulations. Panels show changes in total, convective, and large-scale precipitation relative to the control.
 
 <h2>Diagnostic Climate Models</h2>
 
@@ -50,7 +52,7 @@ Precipitation responses to SST and moisture-profile perturbations in single-colu
 
 <p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
   <img src="/profile/images/figure2a.png" alt="Figure 1" width="70%" /><br />
-  <strong>Figure 1.</strong> The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
+  The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)
 </p>
 
 <p>The OLR bias over the tropical central Pacific generates a wave-like bias pattern in the upper atmosphere and affects the surface air temperature in the extratropics.</p>
@@ -59,7 +61,7 @@ Precipitation responses to SST and moisture-profile perturbations in single-colu
 
 <p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
   <img src="/profile/images/Figure10.png" alt="Figure 2" width="70%" /><br />
-  <strong>Figure 2.</strong> The schematic diagram for the three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
+  The schematic diagram for the three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.
 </p>
 
 <p>The surface air temperature bias is strongly related to the upper-level Rossby wave from the tropics. 1) This Rossby wave appears as excited by the OLR bias in the central tropical Pacific. In addition, even if convection in the tropics is well represented, 2) the weak zonal wind at 500 hPa or upper-level atmosphere reduces eastward propagation of the Rossby wave, and 3) the strong vertical wind shear bias can suppress the amplitude of the Rossby wave (Figure 2).</p>
@@ -67,5 +69,5 @@ Precipitation responses to SST and moisture-profile perturbations in single-colu
 
 <hr />
 
-Previous Research
+Previous Research </p>
 [Coupled Data Assimilation and MJO Prediction — Choi et al. (2025)]({{ "/previous-research/" | relative_url }})
