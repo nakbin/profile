@@ -1,3 +1,10 @@
+---
+layout: single
+permalink: /previous-research/
+title: "Previous Research"
+author_profile: true
+---
+
 [Back to Home]({{ "/" | relative_url }})
 <h2>Coupled Data Assimilation</h2>
 
