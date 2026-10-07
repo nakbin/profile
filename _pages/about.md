@@ -25,30 +25,6 @@ Recent research interests are as follows:
 
 <h2>Climate Model Diagnostics</h2>
 
-<h3>Atmospheric controls on ITCZ biases</h3>
-
-<p>
-Climate models often struggle to reproduce the north–south distribution of tropical rainfall, including excessive precipitation south of the equator commonly associated with the double-ITCZ bias. This study examines whether these errors are primarily controlled by sea surface temperature (SST) or by the vertical thermodynamic structure of the atmosphere. We compare tropical precipitation across climate models and use an inter-model empirical orthogonal function (EOF) analysis to identify the dominant pattern of hemispheric rainfall asymmetry. The resulting asymmetric ITCZ index provides a common measure for examining how differences in precipitation relate to SST, atmospheric temperature, and moisture.
-</p>
-
-<p>
-The asymmetric ITCZ index is more strongly associated with the vertical structure of virtual temperature and specific humidity than with SST, indicating that realistic SSTs alone do not guarantee a realistic tropical rainfall distribution. To test the sensitivity of precipitation to these factors, we conduct single-column model experiments that separately perturb SST and atmospheric moisture profiles. SST warming and cooling primarily affect convective precipitation, whereas wetter and drier atmospheric profiles produce consistent increases and decreases in both convective and large-scale precipitation, respectively (Figure 2). These experiments support the importance of atmospheric moisture in shaping the precipitation response.
-</p>
-
-<p>
-The experiments also suggest that an apparently realistic rainfall distribution can result from compensating model biases. In UFS, correcting both the cold SST bias and the dry atmospheric profile increases Southern Hemisphere precipitation, potentially revealing a double-ITCZ structure that was suppressed by the original biases. Thus, the absence of a pronounced double ITCZ does not necessarily indicate that the underlying physical processes are accurately represented. Improving tropical rainfall simulations requires evaluating SST and atmospheric thermodynamic structure together, rather than assessing model performance from precipitation patterns alone.
-</p>
-
-<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
-  <img src="{{ '/images/itcz_fig3.png' | relative_url }}" alt="Figure 1: Atmospheric thermodynamic structure associated with ITCZ asymmetry" width="100%" /><br />
-  <em>Figure 1. Regression of (a) virtual temperature, (b) SST, (c) specific humidity, and (d) air temperature anomalies onto the asymmetric ITCZ index. Vertical cross-sections are averaged over the eastern Pacific (150°W–90°W). Vectors indicate vertical motion, and the black line in (d) shows zonal mean SST anomalies. Gray shading indicates regression coefficients that are not statistically significant at the 95% confidence level. 
-</p>
-
-<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
-  <img src="{{ '/images/itcz_fig4.png' | relative_url }}" alt="Figure 2: Precipitation responses to SST and moisture perturbations" width="100%" /><br />
-  <em>Figure 2. Changes in (a) total, (b) convective, and (c) large-scale precipitation relative to the control in single-column experiments. W and C denote SST warming and cooling, with numbers indicating the perturbation magnitude in K; Wet and Dry denote moisture-profile perturbations. BC combines a +0.3 K SST correction with a drier moisture profile. 
-</p>
-
 <h3>UFS P8</h3>
 
 <p >
@@ -63,11 +39,35 @@ The experiments also suggest that an apparently realistic rainfall distribution 
   <strong>See More:</strong> <a href="https://vlab.noaa.gov/web/ufs-r2o/dataproducts" target="_blank">https://vlab.noaa.gov/web/ufs-r2o/dataproducts</a>
 </p>
 
+<h3>Atmospheric controls on ITCZ biases</h3>
+
+<p>
+Climate models often struggle to reproduce the north–south distribution of tropical rainfall, including excessive precipitation south of the equator commonly associated with the double-ITCZ bias. This study examines whether these errors are primarily controlled by sea surface temperature (SST) or by the vertical thermodynamic structure of the atmosphere. We compare tropical precipitation across climate models and use an inter-model empirical orthogonal function (EOF) analysis to identify the dominant pattern of hemispheric rainfall asymmetry. The resulting asymmetric ITCZ index provides a common measure for examining how differences in precipitation relate to SST, atmospheric temperature, and moisture.
+</p>
+
+<p>
+The asymmetric ITCZ index is more strongly associated with the vertical structure of virtual temperature and specific humidity than with SST, indicating that realistic SSTs alone do not guarantee a realistic tropical rainfall distribution. To test the sensitivity of precipitation to these factors, we conduct single-column model experiments that separately perturb SST and atmospheric moisture profiles. SST warming and cooling primarily affect convective precipitation, whereas wetter and drier atmospheric profiles produce consistent increases and decreases in both convective and large-scale precipitation, respectively (Figure 2). These experiments support the importance of atmospheric moisture in shaping the precipitation response.
+</p>
+
+<p>
+The experiments also suggest that an apparently realistic rainfall distribution can result from compensating model biases. In UFS, correcting both the cold SST bias and the dry atmospheric profile increases Southern Hemisphere precipitation, potentially revealing a double-ITCZ structure that was suppressed by the original biases. Thus, the absence of a pronounced double ITCZ does not necessarily indicate that the underlying physical processes are accurately represented. Improving tropical rainfall simulations requires evaluating SST and atmospheric thermodynamic structure together, rather than assessing model performance from precipitation patterns alone.
+</p>
+
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6; font-style: normal;">
+  <img src="{{ '/images/itcz_fig3.png' | relative_url }}" alt="Figure 1: Atmospheric thermodynamic structure associated with ITCZ asymmetry" width="100%" /><br />
+  <em>Figure 1. Regression of (a) virtual temperature, (b) SST, (c) specific humidity, and (d) air temperature anomalies onto the asymmetric ITCZ index. Vertical cross-sections are averaged over the eastern Pacific (150°W–90°W). Vectors indicate vertical motion, and the black line in (d) shows zonal mean SST anomalies. Gray shading indicates regression coefficients that are not statistically significant at the 95% confidence level.</em> 
+</p>
+
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6; font-style: normal;">
+  <img src="{{ '/images/itcz_fig4.png' | relative_url }}" alt="Figure 2: Precipitation responses to SST and moisture perturbations" width="100%" /><br />
+  <em>Figure 2. Changes in (a) total, (b) convective, and (c) large-scale precipitation relative to the control in single-column experiments. W and C denote SST warming and cooling, with numbers indicating the perturbation magnitude in K; Wet and Dry denote moisture-profile perturbations. BC combines a +0.3 K SST correction with a drier moisture profile.</em> 
+</p>
+
 <h3>Temperature Bias over CONUS</h3>
 
 <p>The large-scale bias pattern in UFS P8 explains 31.6% of total bias variability and is strongly related to upper-level atmospheric circulation originating from the tropical central Pacific (Figure 3).</p>
 
-<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6; font-style: normal;">
   <img src="/profile/images/figure2a.png" alt="Figure 3" width="70%" /><br />
   <em>Figure 3. The leading EOF from all weekly surface air temperature biases over the CONUS (24–50N, 60–130W)</em>
 </p>
@@ -76,7 +76,7 @@ The experiments also suggest that an apparently realistic rainfall distribution 
 
 <p>UFS P8 also shows weak propagation of the Rossby wave from the tropical central Pacific to the CONUS, indicating that even if the model produces perfect convective activity in the tropics, there can be biases in the midlatitudes affecting the propagation of the Rossby wave.</p>
 
-<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6;">
+<p style="font-family: 'Times New Roman', Times, serif; line-height: 1.6; font-style: normal;">
   <img src="/profile/images/Figure10.png" alt="Figure 4" width="70%" /><br />
   <em>Figure 4. The schematic diagram for the three error sources of surface air temperature bias pattern in UFS P8. Thick arrows indicate teleconnection paths in ERA5 (black) and UFS P8 (blue), respectively.</em>
 </p>
@@ -86,7 +86,4 @@ The experiments also suggest that an apparently realistic rainfall distribution 
 
 <hr />
 
-<hr />
-
-Previous Research </p>
-[Coupled Data Assimilation and MJO Prediction — Choi et al. (2025)]({{ "/previous-research/" | relative_url }})
+[Previous Research]({{ "/previous-research/" | relative_url }})
